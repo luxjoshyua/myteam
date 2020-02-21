@@ -1,7 +1,8 @@
 .chapter {
+    position: relative;
+
     .inner {
         @include inner;
-
         .nav {
             display: flex;
             justify-content: space-between;
@@ -9,6 +10,7 @@
 
             .left-nav {
                 @include centrecontent;
+
                 .logo {
                     margin-right: 80px;
                 }
@@ -33,15 +35,144 @@
 
         .content {
             @include centrecontent;
+
+            .left,
+            .right {
+                width: 50%;
+            }
+
             .left {
-                max-width: 635px;
                 width: 100%;
             }
 
             .right {
-                max-width: 445px;
                 width: 100%;
             }
         }
     }
+}
+
+
+.chapter1 {
+    background-color: $dark-green;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        background-image: url("../assets/images/chapter-one/bg-pattern-home-3.svg");
+        position: absolute;
+        right: -100px;
+        top: 50%;
+        width: 200px;
+        height: 250px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .inner {
+        padding: 64px 0;
+
+        .content {
+            padding-top: 140px;
+            align-items: flex-start;
+
+            .left {
+                &:before {
+                    position: relative;
+                    content: "";
+                    display: block;
+                    width: 50px;
+                    height: 4px;
+                    background: $pink 0% 0% no-repeat padding-box;
+                }
+
+                h2 {
+                    padding-top: 58px;
+                }
+
+            }
+
+            .right {
+                .row {
+                    padding-bottom: 22px;
+
+                    .content {
+                        display: flex;
+                        padding-top: 0;
+
+                        .icon {
+                            padding-right: 14px;
+                        }
+
+                        .text {
+                            h6 {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.chapter2 {
+    &::before {
+        content: "";
+        background-image: url("../assets/images/chapter-two/bg-pattern-home-4-about-3.svg");
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 250px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+    .inner {
+        .content {
+            padding: 140px 32px; 
+            flex-direction: column;
+            h2 {
+                text-align: center;
+            }
+            .testimonials {
+                display: flex;
+                margin-top: 92px;
+                .testimonial {
+                    padding-right: 32px;
+                    text-align: center;
+                    background-image: url("../assets/images/chapter-two/icon-quotes.svg");
+                    background-repeat: no-repeat;
+                    background-position: center top;
+
+                    .quote {
+                        padding-bottom: 12px;
+                    }
+                    .source {
+                        padding-bottom: 22px;
+                        p {
+                            margin: 0;
+                        }
+                        .author {
+                            color: $extra-light-green;
+                        }
+                        .title {
+
+                        }
+
+                    }
+                    .icon {
+                        img {
+                            width: 62px;
+                            border-radius: 50%;
+                            border: 2px solid $light-blue;
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+    }
+
 }

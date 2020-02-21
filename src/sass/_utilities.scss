@@ -1,9 +1,8 @@
 @mixin inner {
     position: relative;
     margin: 0 auto;
-    max-width: 1110px;
+    max-width: 1140px;
     width: 100%;
-    // border: 2px solid gold;
 }
 
 @mixin centrecontent {
@@ -25,11 +24,17 @@
 .heading-regular {
     font-size: 64px;
     line-height: 100px;
+    color: $white;
 }
 
 .heading-small {
     font-size: 48px;
     line-height: 48px;
+}
+
+.heading-xsmall {
+    font-size: 18px;
+    line-height: 28px;
 }
 
 .heading-pink {

@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic:400,500,600,700&display=swap');
 @import "variables";
 @import "utilities";
 @import "hero";
-@import "fonts";
 @import "chapters";
 
 html, body {
@@ -18,7 +18,8 @@ body {
     line-height: 25px;
     color: $white;
     font-family: 'Livvic';
-    font-weight: 600;
+    // medium is 500, semi-bold is 600
+    font-weight: 500;
     background-color: $light-green;
 }
 
@@ -27,6 +28,6 @@ a {
     color: inherit;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,p {
     margin: 0;
 }

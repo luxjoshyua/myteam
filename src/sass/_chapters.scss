@@ -3,6 +3,7 @@
 
     .inner {
         @include inner;
+
         .nav {
             display: flex;
             justify-content: space-between;
@@ -22,15 +23,7 @@
                 }
             }
 
-            .right-nav {
-                a {
-                    .btn {
-                        border-radius: 24px;
-                        border: 2px solid $white;
-                        padding: 12px 32px;
-                    }
-                }
-            }
+            .right-nav {}
         }
 
         .content {
@@ -127,16 +120,20 @@
         background-repeat: no-repeat;
         overflow: hidden;
     }
+
     .inner {
         .content {
-            padding: 140px 32px; 
+            padding: 140px 32px;
             flex-direction: column;
+
             h2 {
                 text-align: center;
             }
+
             .testimonials {
                 display: flex;
                 margin-top: 92px;
+
                 .testimonial {
                     padding-right: 32px;
                     text-align: center;
@@ -147,19 +144,22 @@
                     .quote {
                         padding-bottom: 12px;
                     }
+
                     .source {
                         padding-bottom: 22px;
+
                         p {
                             margin: 0;
                         }
+
                         .author {
                             color: $extra-light-green;
                         }
-                        .title {
 
-                        }
+                        .title {}
 
                     }
+
                     .icon {
                         img {
                             width: 62px;
@@ -167,12 +167,78 @@
                             border: 2px solid $light-blue;
                         }
                     }
-
-
                 }
             }
+        }
+    }
+}
+
+.chapter3 {
+    background-color: $pink;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        background-image: url("../assets/images/chapter-three/bg-pattern-home-6-about-5.svg");
+        position: absolute;
+        left: 0;
+        top: 45px;
+        width: 200px;
+        height: 140px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .inner {
+        .content {
+            padding: 84px 0;
+            justify-content: space-around;
+            a {
+                .btn {
+                    border: 2px solid $dark-green;
+                    color: $dark-green;
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    background-color: $dark-green;
+    .inner {
+        @include inner;
+        .content {
+            padding: 64px 0;
+            @include centrecontent;
+            .nav {
+                .links {
+                    padding-top: 22px;
+                    a {
+                        &:first-of-type {
+                            padding-right: 22px;   
+                        }
+                    }
+                }
+            }
+            .address {
+                p {
+                    margin: 0;
+                }
+
+            }
+            .socials {
+                
+                a {
+                    padding-right: 12px;
+                }
+                .copyright {
+                    padding-top: 22px;
+                }
+
+            }
+
 
         }
     }
-
 }

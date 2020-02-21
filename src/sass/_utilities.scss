@@ -1,0 +1,38 @@
+@mixin inner {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1110px;
+    width: 100%;
+    // border: 2px solid gold;
+}
+
+@mixin centrecontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading {
+    font-weight: 700;
+    text-align: left;
+}
+
+.heading-large {
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.heading-regular {
+    font-size: 64px;
+    line-height: 100px;
+}
+
+.heading-small {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.heading-pink {
+    color: $pink;
+}
+

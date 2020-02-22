@@ -1,0 +1,90 @@
+.contact {
+    &:before {
+        content: "";
+        background-image: url("../assets/images/contact/bg-pattern-about-2-contact-1.svg");
+        position: absolute;
+        left: -120px;
+        top: 40%;
+        background-repeat: no-repeat;
+        height: 210px;
+        width: 220px;
+    }
+
+    &:after {
+        content: "";
+        background-image: url("../assets/images/contact/bg-pattern-contact-2.svg");
+        position: absolute;
+        right: -9%;
+        top: 80%;
+        background-repeat: no-repeat;
+        height: 210px;
+        width: 220px;
+    }
+
+    .inner {
+        .content {
+            padding-top: 120px;
+
+            .left {
+                h1 {
+                    padding-bottom: 16px;
+                }
+
+                h2 {
+                    margin-bottom: 32px;
+                }
+
+                .row {
+                    .content {
+                        padding-top: 16px;
+                        justify-content: flex-start;
+
+                        .icon {
+                            padding-right: 16px;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                margin-top: 32px;
+                padding-right: 32px;
+                .form {
+                    margin-top: 32px;
+
+                    .field {
+                        margin-bottom: 32px; 
+
+                        input {
+                            background: transparent;
+                            outline: none;
+                            font-size: 16px;
+                            text-align: left;
+                            border-width: 0 0 1px;
+                            width: 100%;
+                            padding-bottom: 14px;
+                            font-family: inherit;
+                        }
+
+                        #message {
+                            padding-bottom: 84px;
+                        }
+                        ::placeholder {
+                            color: $white;
+                            opacity: .6;
+
+                        }
+                    }
+
+                    a {
+                        .btn {
+                            background-color: $white;
+                            max-width: 140px;
+                            color: $dark-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

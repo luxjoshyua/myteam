@@ -1,8 +1,10 @@
 .chapter {
     position: relative;
+    overflow: hidden;
 
     .inner {
         @include inner;
+        padding: 70px 0;
 
         .nav {
             display: flex;
@@ -22,13 +24,11 @@
                     }
                 }
             }
-
-            .right-nav {}
         }
 
         .content {
             @include centrecontent;
-
+    
             .left,
             .right {
                 width: 50%;
@@ -41,6 +41,34 @@
             .right {
                 width: 100%;
             }
+
+
+            .quote {
+                padding-bottom: 12px;
+            }
+
+            .source {
+                padding-bottom: 22px;
+
+                p {
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .author {
+                    color: $extra-light-green;
+                    text-align: center;
+                }
+
+            }
+
+            .icon {
+                img {
+                    width: 62px;
+                    border-radius: 50%;
+                    border: 2px solid $light-blue;
+                }
+            }
         }
     }
 }
@@ -48,8 +76,7 @@
 
 .chapter1 {
     background-color: $dark-green;
-    overflow: hidden;
-
+    
     &:after {
         content: "";
         background-image: url("../assets/images/chapter-one/bg-pattern-home-3.svg");
@@ -63,8 +90,6 @@
     }
 
     .inner {
-        padding: 64px 0;
-
         .content {
             padding-top: 140px;
             align-items: flex-start;
@@ -87,11 +112,11 @@
 
             .right {
                 .row {
-                    padding-bottom: 22px;
+                    padding-bottom: 32px;
 
                     .content {
                         display: flex;
-                        padding-top: 0;
+                        padding: 0;
 
                         .icon {
                             padding-right: 14px;
@@ -106,7 +131,6 @@
         }
     }
 }
-
 
 .chapter2 {
     &::before {
@@ -140,40 +164,13 @@
                     background-image: url("../assets/images/chapter-two/icon-quotes.svg");
                     background-repeat: no-repeat;
                     background-position: center top;
-
-                    .quote {
-                        padding-bottom: 12px;
-                    }
-
-                    .source {
-                        padding-bottom: 22px;
-
-                        p {
-                            margin: 0;
-                        }
-
-                        .author {
-                            color: $extra-light-green;
-                        }
-
-                        .title {}
-
-                    }
-
-                    .icon {
-                        img {
-                            width: 62px;
-                            border-radius: 50%;
-                            border: 2px solid $light-blue;
-                        }
-                    }
                 }
             }
         }
     }
 }
 
-.chapter3 {
+.cta {
     background-color: $pink;
     overflow: hidden;
 
@@ -182,7 +179,7 @@
         background-image: url("../assets/images/chapter-three/bg-pattern-home-6-about-5.svg");
         position: absolute;
         left: 0;
-        top: 45px;
+        bottom: 0;
         width: 200px;
         height: 140px;
         background-repeat: no-repeat;
@@ -190,6 +187,7 @@
     }
 
     .inner {
+        padding: 0;
         .content {
             padding: 84px 0;
             justify-content: space-around;
@@ -202,7 +200,6 @@
         }
     }
 }
-
 
 footer {
     background-color: $dark-green;
@@ -235,10 +232,7 @@ footer {
                 .copyright {
                     padding-top: 22px;
                 }
-
             }
-
-
         }
     }
 }

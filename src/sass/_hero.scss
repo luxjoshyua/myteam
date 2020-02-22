@@ -1,8 +1,6 @@
 .hero {
     position: relative;
     background-color: #014E56;
-    height: 100vh;
-
     &:before {
         content: "";
         background-image: url("../assets/images/hero/bg-pattern-home-1.svg");
@@ -27,7 +25,7 @@
     }
 
     .inner {
-        @include inner;
+
         .content {
             margin-top: 130px;
             .right {

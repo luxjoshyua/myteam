@@ -10,8 +10,10 @@
         background-repeat: no-repeat;
         height: 210px;
         width: 220px;
+        @include md {
+            display: none;
+        }
     }
-
 
     &:after {
         content: "";
@@ -22,12 +24,18 @@
         background-repeat: no-repeat;
         height: 100px;
         width: 360px;
+        @include md {
+            left: 25%;
+
+        }
     }
 
     .inner {
-
         .content {
             margin-top: 130px;
+            @include md {
+                margin: 130px 0 150px;
+            }
             .right {
                 &:before {
                     content: "";
@@ -37,9 +45,16 @@
                     width: 50px;
                     height: 4px;
                     background: $extra-light-green 0% 0% no-repeat padding-box;
+                    @include md {
+                        display: none;
+                    }
                 }
                 .copy {
                     padding: 54px 66px;
+                    @include md {
+                        padding: 24px 56px;
+                        text-align: center;
+                    }
                     p {
                         font-size: 18px;
                         line-height: 28px;

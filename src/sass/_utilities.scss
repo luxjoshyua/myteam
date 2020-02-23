@@ -3,22 +3,35 @@
     margin: 0 auto;
     max-width: 1140px;
     width: 100%;
+    @include md {
+        max-width: 660px;
+    }
 }
 
 @mixin centrecontent {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include md {
+        flex-direction: column;
+    }
 }
 
 .heading {
     font-weight: 700;
     text-align: left;
+    @include md {
+        text-align: center;
+    }
 }
 
 .heading-large {
     font-size: 100px;
     line-height: 100px;
+    @include md {
+        font-size: 64px;
+        line-height: 56px;
+    }
 }
 
 .heading-regular {
@@ -30,6 +43,10 @@
 .heading-small {
     font-size: 48px;
     line-height: 48px;
+    @include md {
+        font-size: 32px;
+        line-height: 32px;
+    }
 }
 
 .heading-xsmall {

@@ -95,6 +95,7 @@
                     }
                     .expand {
                         background-color: $pink;
+                        z-index: 2;
                         .plus {
                             font-size: 32px;
                             color: $dark-green;

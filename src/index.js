@@ -28,44 +28,15 @@ import style from "./sass/index.scss";
 
 
 // show dialogue boxes
-const showBoxes = [...document.querySelectorAll(".plus")];
-
-const popUpBoxes = [...document.querySelectorAll(".popup-box")];
-
+const showBoxes = [...document.querySelectorAll(".expand")];
 
 showBoxes.forEach(box => {
     box.addEventListener('click', (e) => {
-        e = event.target;
-        // console.log(e)
-      
-        popUpBoxes.classList.add("show");
+        box.style.backgroundColor = "#79C8C7";
+        box.innerHTML = '-';
+        box.parentElement.querySelector('.popup-box').classList.toggle('show');
     })
 })
 
-
-// for (let i = 0; i < showBoxes.length; i++) {
-//     showBoxes[i].addEventListener("click", (e) => {
-//         e = event.target;
-//         console.log(e)
-//         for (let i = 0; i < popUpBoxes.length; i++) {
-//             if (e) {
-//                 popUpBoxes[i].classList.toggle('show');
-//             }
-//         }
-//     });
-// }
-
-// showBoxes.addEventListener('click', (e) => {
-//     popUpBoxes.classList.toggle('show'); 
-// })
-
-
-// showBoxes.forEach(box => {
-//     box.addEventListener("click", (e) => {
-//         if (e) {
-//             popUpBoxes.style.display = 'block';
-//         }
-//     })
-// })
 
 

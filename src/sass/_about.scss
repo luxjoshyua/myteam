@@ -14,6 +14,7 @@
     .inner {
         .content {
             padding: 120px 0;
+
             .left {
                 padding-bottom: 22px;
             }
@@ -22,7 +23,8 @@
 }
 
 .directors {
-    background-color: $green; 
+    background-color: $green;
+
     &:before {
         content: "";
         background-image: url("../assets/images/about/bg-pattern-about-2-contact-1.svg");
@@ -86,23 +88,36 @@
                         padding-bottom: 62px;
                     }
 
-                    .expand, .close {
+                    .expand,
+                    .close {
                         position: absolute;
                         bottom: -26px;
                         width: 56px;
                         height: 56px;
                         border-radius: 50%;
                     }
+
                     .expand {
                         background-color: $pink;
                         z-index: 2;
-                        .plus {
+
+                        .plus,
+                        .minus {
                             font-size: 32px;
-                            color: $dark-green;
                             position: relative;
                             top: 20%;
                             left: 35%;
+                            color: $dark-green;
                         }
+
+                        .plus {
+                    
+                        }
+
+                        .minus {
+                            display: none;
+                        }
+
                     }
 
                     .popup-box {
@@ -114,7 +129,7 @@
                         width: 100%;
                         height: 100%;
                         text-align: center;
-                    
+
                         .author {
                             padding-top: 32px;
                             color: $extra-light-green;
@@ -123,26 +138,18 @@
                         .quote {
                             padding: 12px 0;
                         }
+
                         .socials {
                             display: flex;
                             align-items: center;
                             justify-content: center;
+
                             img {
                                 padding-right: 8px;
                             }
                         }
-                        .close {
-                            background-color: $extra-light-green;
-                            left: 41.7%;
-                            .minus {
-                                font-size: 34px;
-                                color: $dark-green;
-                                position: relative;
-                                top: 20%;
-                                left: 0;
-                            }
-                        }
                     }
+
                     .show {
                         display: block;
                     }

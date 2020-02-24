@@ -8,6 +8,9 @@
         background-repeat: no-repeat;
         height: 210px;
         width: 220px;
+        @include md {
+            top: 20%;
+        }
     }
 
     &:after {
@@ -19,6 +22,9 @@
         background-repeat: no-repeat;
         height: 210px;
         width: 220px;
+        @include md {
+            top: 87%;
+        }
     }
 
     .inner {
@@ -38,6 +44,13 @@
                     .content {
                         padding-top: 16px;
                         justify-content: flex-start;
+                        @include md {
+                            flex-direction: row;
+                            justify-content: start;
+                            max-width: 70%;
+                            margin: 0 auto;
+
+                        }
 
                         .icon {
                             padding-right: 16px;
@@ -49,8 +62,14 @@
             .right {
                 margin-top: 32px;
                 padding-right: 32px;
+                @include md {
+                    padding: 0 36px;
+                }
                 form {
                     margin-top: 32px;
+                    @include md {
+                        margin: 32px 0 86px;
+                    }
 
                     .field {
                         margin-bottom: 32px; 

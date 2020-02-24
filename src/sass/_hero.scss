@@ -26,7 +26,9 @@
         width: 360px;
         @include md {
             left: 25%;
-
+        }
+        @include sm {
+            left: 8%;
         }
     }
 
@@ -34,7 +36,12 @@
         .content {
             margin-top: 130px;
             @include md {
-                margin: 130px 0 150px;
+                margin: 130px 0 170px;
+            }
+            .left {
+                @include md {
+                    margin-bottom: 16px;
+                }
             }
             .right {
                 &:before {

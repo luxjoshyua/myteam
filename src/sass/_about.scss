@@ -14,9 +14,20 @@
     .inner {
         .content {
             padding: 120px 0;
+            @include md {
+                padding: 120px 0 160px;
+            }
 
             .left {
                 padding-bottom: 22px;
+            }
+            .right {
+                .copy {
+                    @include md {
+                        text-align: center;
+                        padding: 0 32px; 
+                    }
+                }
             }
         }
     }
@@ -74,6 +85,10 @@
                     @include centrecontent;
                     flex-direction: column;
                     margin: 32px auto;
+                    @include md {
+                        margin: 32px 14px;
+                        width: 300px;
+                    }
 
                     .icon {
                         padding: 32px 0 16px;
@@ -109,11 +124,6 @@
                             left: 35%;
                             color: $dark-green;
                         }
-
-                        .plus {
-                    
-                        }
-
                         .minus {
                             display: none;
                         }
@@ -194,10 +204,17 @@
                 text-align: center;
                 width: 100%;
                 padding-bottom: 70px;
+                @include md {
+                    padding-bottom: 32px;
+                }
             }
 
             .client-logos-wrapper {
                 @include centrecontent;
+                @include md {
+                    flex-direction: row;
+                    max-width: 100%;
+                }
 
                 .logo {
                     margin-right: 28px;
@@ -205,6 +222,9 @@
                     img {
                         max-width: 160px;
                         max-height: 40px;
+                        @include md {
+                            max-width: 120px;
+                        }
                     }
                 }
             }

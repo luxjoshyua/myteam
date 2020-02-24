@@ -110,6 +110,9 @@
             }
 
             .left {
+                @include sm {
+                    padding-left: 16px;
+                }
                 &:before {
                     position: relative;
                     content: "";
@@ -142,6 +145,10 @@
                 .row {
                     padding-bottom: 32px;
 
+                    @include md {
+                        margin-bottom: 42px;
+                    }
+
                     .content {
                         display: flex;
                         padding: 0;
@@ -149,16 +156,30 @@
                         @include md {
                             flex-direction: row;
                         }
+                        @include sm {
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 0 16px;
+                        }
 
                         .icon {
                             padding-right: 14px;
                             border: none;
+                            @include sm {
+                                padding-right: 0;
+                            }
                         }
 
                         .text {
+                            @include sm {
+                                text-align: center;
+                            }
                             h6 {
                                 @include md {
                                     text-align: left;
+                                }
+                                @include sm {
+                                    text-align: center;
                                 }
                             }
                         }
@@ -247,6 +268,7 @@
 
     .inner {
         padding: 0;
+
         @include md {
             padding: 32px 0;
         }
@@ -254,6 +276,7 @@
         .content {
             padding: 84px 0;
             justify-content: space-around;
+
             @include md {
                 flex-direction: row;
                 padding: 72px 0;
@@ -275,9 +298,17 @@ footer {
     .inner {
         @include inner;
 
+        @include md {
+            max-width: 700px;
+        }
+
         .content {
             padding: 64px 0;
             @include centrecontent;
+
+            @include md {
+                flex-direction: row;
+            }
 
             .nav {
                 .links {
@@ -299,6 +330,13 @@ footer {
             }
 
             .socials {
+                .social-wrapper {
+                    @include md {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                    }
+                }
 
                 a {
                     padding-right: 12px;

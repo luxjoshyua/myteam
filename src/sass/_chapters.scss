@@ -15,6 +15,10 @@
             justify-content: space-between;
             padding-top: 77px;
 
+            @include sm {
+                display: none;
+            }
+
             @include md {
                 padding-top: 32px;
             }
@@ -80,6 +84,80 @@
     }
 }
 
+.mobile-nav {
+    position: relative;
+    @media screen and (min-width: 601px) {
+        display: none;
+    }   
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 22px;
+        align-items: center;
+    }
+}
+
+.mobile-nav-open {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #2C6269;
+    height: 100vh;
+    width: 70%;
+    transform: translateX(100%);
+    transition: transform 0.6s ease;
+    z-index: 2;
+    &:after {
+        content: "";
+        background-image: url("../assets/images/mobile/bg-pattern-about-1-mobile-nav-1.svg");
+        position: absolute;
+        right: -50px;
+        bottom: 20px;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 200px;
+        transform: rotate(-90deg);
+    }
+
+    .inner {
+        margin-top: 64px;
+        padding: 0 26px;
+
+        .close-icon {
+            text-align: right;
+        }
+
+        .menu-items {
+            margin-top: 16px;
+            padding-left: 32px;
+            display: flex;
+            flex-direction: column;
+
+            .link {
+                padding-bottom: 12px;
+            }
+
+            a {
+                width: fit-content;
+                margin-top: 12px;
+
+                .btn {}
+            }
+
+        }
+    }
+}
+
+.mobile-show {
+    display: block;
+    transform: translateX(0);
+}
+
+.mobile-close {
+    display: none;
+}
+
 
 .chapter1 {
     background-color: $dark-green;
@@ -113,6 +191,7 @@
                 @include sm {
                     padding-left: 16px;
                 }
+
                 &:before {
                     position: relative;
                     content: "";
@@ -156,6 +235,7 @@
                         @include md {
                             flex-direction: row;
                         }
+
                         @include sm {
                             flex-direction: column;
                             align-items: center;
@@ -165,6 +245,7 @@
                         .icon {
                             padding-right: 14px;
                             border: none;
+
                             @include sm {
                                 padding-right: 0;
                             }
@@ -174,10 +255,12 @@
                             @include sm {
                                 text-align: center;
                             }
+
                             h6 {
                                 @include md {
                                     text-align: left;
                                 }
+
                                 @include sm {
                                     text-align: center;
                                 }
@@ -282,7 +365,15 @@
                 padding: 72px 0;
             }
 
+            @include sm {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+
             a {
+                padding: 18px 0;
+
                 .btn {
                     border: 2px solid $dark-green;
                     color: $dark-green;
@@ -310,7 +401,13 @@ footer {
                 flex-direction: row;
             }
 
+            @include sm {
+                flex-direction: column;
+            }
+
             .nav {
+                text-align: center;
+
                 .links {
                     padding-top: 22px;
 
@@ -323,6 +420,8 @@ footer {
             }
 
             .address {
+                text-align: center;
+
                 p {
                     margin: 0;
                 }
@@ -330,11 +429,21 @@ footer {
             }
 
             .socials {
+                text-align: center;
+
+                @include sm {
+                    padding-top: 32px;
+                }
+
                 .social-wrapper {
                     @include md {
                         display: flex;
                         align-items: center;
                         justify-content: flex-end;
+                    }
+
+                    @include sm {
+                        justify-content: center;
                     }
                 }
 
@@ -344,6 +453,10 @@ footer {
 
                 .copyright {
                     padding-top: 22px;
+
+                    @include sm {
+                        padding-top: 12px;
+                    }
                 }
             }
         }

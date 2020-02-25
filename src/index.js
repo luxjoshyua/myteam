@@ -27,6 +27,10 @@ import style from "./sass/index.scss";
 // checkForm();
 
 
+
+
+
+
 // show dialogue boxes
 const showBoxes = [...document.querySelectorAll(".expand")];
 const plus = document.querySelector('.plus');
@@ -49,4 +53,18 @@ showBoxes.forEach(box => {
 
         }
     })
+})
+
+const hamburger = document.querySelector('.hamburger');
+const mobileNav = document.querySelector('.mobile-nav-open');
+const mobileClose = document.querySelector('.close-icon');
+
+hamburger.addEventListener('click', (e) => {
+    mobileNav.classList.toggle('mobile-show');
+    mobileNav.classList.remove('mobile-close');
+})
+
+mobileClose.addEventListener('click', (e) => {
+    mobileNav.classList.toggle('mobile-close'); 
+    mobileNav.classList.remove('mobile-show');
 })

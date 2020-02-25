@@ -76,6 +76,9 @@ a {
         border: 2px solid $white;
         padding: 12px 32px;
         text-align: center;
+        @include sm {
+            padding: 8px 18px;
+        }
     }
 }
 

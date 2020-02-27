@@ -6,30 +6,18 @@ import "./js/content-fade";
 const form = document.querySelector("form");
 const formInputs = form.elements;
 const submitBtn = document.querySelector('.submit-btn');
-const formErrorMessage = document.querySelectorAll('.error-message');
 
 const checkForm = () => {
-
     let canSubmit = true;
-
     for (let index = 0; index < formInputs.length; index++) {
-
         const element = formInputs[index];
-       
-
         if (element.value.length === 0) {
-
-            console.log("It's an empty field")
-
-            element.style.border = "1px solid pink";
-
-            // formErrorMessage.style.display = "block";
-            
+            element.classList.add('error');
             canSubmit = false;
 
         } else if (element.value.length > 0) {
-            console.log("User has entered text into the field");
-            element.style.border = "none";
+            element.nextElementSibling.style.display = "none";
+            element.classList.remove('error');
         }
     }
 
@@ -37,10 +25,14 @@ const checkForm = () => {
         // ! means not
         submitBtn.disabled = !canSubmit;
     }
-
 }
 
-checkForm();
+// if keydown on form, run the checkForm function
+form.addEventListener('keydown', (e) => {
+    checkForm();
+});
+
+
 
 
 

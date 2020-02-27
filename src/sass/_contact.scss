@@ -90,10 +90,14 @@
                             padding-bottom: 84px;
                         }
                         ::placeholder {
-                            color: $white;
+                            color: $pink;
                             opacity: .6;
-
                         }
+                    }
+
+                    .error {
+                        color: $pink !important;
+                        border: 1px  solid $pink;
                     }
 
 

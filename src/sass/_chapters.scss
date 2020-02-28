@@ -31,6 +31,10 @@
                     padding-right: 22px;
                 }
 
+                img {
+                    margin-right: 32px;
+                }
+
                 .link {
                     &:first-of-type {
                         padding-right: 18px;
@@ -413,6 +417,9 @@ footer {
 
                 .links {
                     padding-top: 22px;
+                    @include sm {
+                        padding: 22px 0;
+                    }
 
                     a {
                         &:first-of-type {

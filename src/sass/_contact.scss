@@ -40,6 +40,9 @@
             .left {
                 h1 {
                     padding-bottom: 16px;
+                    @include sm {
+                        padding-bottom: 8px;
+                    }
                 }
 
                 h2 {
@@ -55,11 +58,19 @@
                             justify-content: start;
                             max-width: 70%;
                             margin: 0 auto;
-
+                        }
+                        @include sm {
+                            max-width: 100%;
+                            padding: 0 12px;
                         }
 
                         .icon {
                             padding-right: 16px;
+                        }
+                        .text {
+                            @include sm {
+                                text-align: left;
+                            }
                         }
                     }
                 }
@@ -75,6 +86,9 @@
                     margin-top: 32px;
                     @include md {
                         margin: 32px 0 86px;
+                    }
+                    @include sm {
+                        margin: 32px 0 146px;
                     }
 
                     .field {

@@ -221,9 +221,15 @@
                     flex-direction: row;
                     max-width: 100%;
                 }
+                @include sm {
+                    flex-direction: column;
+                }
 
                 .logo {
                     margin-right: 28px;
+                    @include sm {
+                        margin: 21px 0 0;
+                    }
 
                     img {
                         max-width: 160px;

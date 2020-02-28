@@ -7,8 +7,7 @@ animatedTags.forEach(tag => {
 
 const fadeIn = function () {
 
-    // let delay = 0.25
-    let delay = 0.5
+    let delay = 0.2
 
     animatedTags.forEach(tag => {
         // the () runs it

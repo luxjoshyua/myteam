@@ -27,8 +27,8 @@
                 @include centrecontent;
                 flex-direction: row !important;
 
-                .logo {
-                    margin-right: 80px;
+                a {
+                    padding-right: 22px;
                 }
 
                 .link {
@@ -97,7 +97,7 @@
         padding: 12px 22px;
         align-items: center;
 
-        .mobile-content-hidden {            
+        .mobile-content-hidden {
             position: fixed;
             top: 0;
             right: 0;
@@ -131,6 +131,7 @@
             .inner {
                 margin-top: 64px;
                 padding: 0 26px;
+
                 .menu-items {
                     margin-top: 16px;
                     padding-left: 32px;

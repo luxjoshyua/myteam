@@ -17,6 +17,9 @@
             @include md {
                 padding: 120px 0 160px;
             }
+            @include sm {
+                padding: 60px 0 160px;
+            }
 
             .left {
                 padding-bottom: 22px;

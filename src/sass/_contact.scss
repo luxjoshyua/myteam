@@ -11,6 +11,9 @@
         @include md {
             top: 20%;
         }
+        @include sm {
+            display: none;
+        }
     }
 
     &:after {
@@ -30,6 +33,9 @@
     .inner {
         .content {
             padding-top: 120px;
+            @include sm {
+                padding-top: 60px;
+            }
 
             .left {
                 h1 {

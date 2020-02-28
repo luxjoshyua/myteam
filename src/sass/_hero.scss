@@ -34,7 +34,7 @@
 
     .inner {
         .content {
-            margin-top: 130px;
+            margin: 130px 0;
             @include md {
                 margin: 130px 0 170px;
             }

@@ -1,5 +1,5 @@
 # Frontend Mentors My Team Challenge
-Challenge available <a href="https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW" target="_blank">here.</a>
+Challenge available <a href="https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW" target="blank">here.</a>
 
 # Getting started
 

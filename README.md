@@ -1,5 +1,7 @@
 # Frontend Mentors My Team Challenge
 Challenge available <a href="https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW" target="blank">here.</a>
+<br>
+Final link <a href="https://luxjoshyua.github.io/myteam/">here.</a>
 
 # Getting started
 
